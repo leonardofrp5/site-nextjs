@@ -1,4 +1,7 @@
 import Head from 'next/head';
+
+import Header from '../components/Header/Header';
+import Footer from '../components/Footer/Footer';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
@@ -12,11 +15,12 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      <Header />
       <main className={styles.main}>
-        <img className={styles.imageProfile} src="/images/photo-home.jpg" alt="photo profile" />
+        {/* <img className={styles.imageProfile} src="/images/photo-home.jpg" alt="photo profile" /> */}
         <h1 className={styles.title}>Coming soon</h1>
       </main>
+      <Footer />
     </div>
   );
 }
