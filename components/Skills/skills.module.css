@@ -1,0 +1,45 @@
+.container {
+  height: 600px;
+  padding: 4rem;
+  /* flex: 1 1; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 50%;
+  margin: auto;
+  border-radius: 5px;
+
+  background-color: rgba(255, 255, 255, 0.1);
+  border: solid;
+
+  /* margin: 10rem auto; */
+}
+
+.title {
+  font-size: 36px;
+}
+
+.contentSkills {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 490px;
+  min-width: 245px;
+}
+
+.contenLanguage {
+  height: 110px;
+  width: 110px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin: 5px;
+}
+
+.image {
+  width: 80%;
+}
