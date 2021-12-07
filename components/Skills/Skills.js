@@ -8,7 +8,7 @@ export default function Skills() {
       <h2 className={skills.title}>Habilidades</h2>
       <div className={skills.contentSkills}>
         {SKILS_LIST.map(({ name, image }) => (
-          <div className={skills.contenLanguage}>
+          <div className={skills.contenLanguage} key={name}>
             <img src={image} className={skills.image} alt={name} />
           </div>
         ))}
