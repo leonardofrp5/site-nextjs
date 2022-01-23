@@ -20,6 +20,7 @@ export default function Header() {
             <li className="text-slate-50 lg:p-6 p-2 lg:text-xl text-base">{i18n.MENU_ABOUT}</li>
             <li className="text-slate-50 lg:p-6 p-2 lg:text-xl text-base">{i18n.MENU_EXPERIENCE}</li>
             <li className="text-slate-50 lg:p-6 p-2 lg:text-xl text-base">{i18n.MENU_SKILLS}</li>
+            {/* falta agregar key en los li */}
           </ul>
         </div>
         <div className="flex justify-items-end">
