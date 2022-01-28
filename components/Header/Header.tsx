@@ -17,13 +17,13 @@ export default function Header() {
         </Link>
         <div>
           <ul className="flex list-none">
-            <li className="text-slate-50 lg:p-6 p-2 lg:text-xl text-base cursor-pointer">
+            <li className="text-zinc-800 dark:text-slate-50 lg:p-6 p-2 lg:text-xl text-base cursor-pointer">
               {i18n.MENU_ABOUT}
             </li>
-            <li className="text-slate-50 lg:p-6 p-2 lg:text-xl text-base cursor-pointer">
+            <li className="text-zinc-800 dark:text-slate-50 lg:p-6 p-2 lg:text-xl text-base cursor-pointer">
               {i18n.MENU_EXPERIENCE}
             </li>
-            <li className="text-slate-50 lg:p-6 p-2 lg:text-xl text-base cursor-pointer">
+            <li className="text-zinc-800 dark:text-slate-500 lg:p-6 p-2 lg:text-xl text-base cursor-pointer">
               {i18n.MENU_SKILLS}
             </li>
           </ul>

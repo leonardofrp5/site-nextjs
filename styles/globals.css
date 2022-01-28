@@ -31,3 +31,10 @@ ol {
     --content: '🌑 dark version';
   }
 }
+
+@media (prefers-color-scheme: light) {
+  body {
+    --color: #f8f8f2;
+    --content: '🌞 light version';
+  }
+}
