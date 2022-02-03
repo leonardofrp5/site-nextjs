@@ -3,6 +3,8 @@ import Image from 'next/image';
 
 import Header from 'components/Header/Header';
 import AboutMe from 'components/AboutMe/AboutMe';
+import Experience from 'components/Experience/Experience';
+import Skills from 'components/Skills/Skills';
 import Footer from '../components/Footer/Footer';
 import styles from '../styles/Home.module.css';
 
@@ -19,6 +21,8 @@ export default function Home() {
       </Head>
       <Header />
       <AboutMe />
+      <Experience />
+      <Skills />
       <Footer />
     </div>
   );
