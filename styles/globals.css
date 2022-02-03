@@ -25,7 +25,7 @@ ol {
   margin: 0;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   body {
     --color: #282c34;
     --content: '🌑 dark version';
@@ -37,4 +37,4 @@ ol {
     --color: #f8f8f2;
     --content: '🌞 light version';
   }
-}
+} */
