@@ -9,28 +9,24 @@ export default function Header() {
   const { locale } = useRouter();
   const i18n = useTranslation();
   const { theme, setTheme } = useTheme();
-
   const dark = theme === 'dark' ? true : false;
-  // const [theme, setTheme] = useState('Dark');
-  const [checked, setChecked] = useState(dark);
-
-  console.log(theme);
+  const [statusTheme, setStatusTheme] = useState(dark);
 
   const changedTheme = () => {
-    if (checked) {
-      setChecked(false);
+    if (statusTheme) {
+      setStatusTheme(false);
     } else {
-      setChecked(true);
+      setStatusTheme(true);
     }
   };
 
   useEffect(() => {
-    setTheme(checked ? 'dark' : 'light');
-  }, [checked, setTheme]);
+    setTheme(statusTheme ? 'dark' : 'light');
+  }, [statusTheme, setTheme]);
 
   return (
     <header className="flex place-content-center ">
-      <div className="container flex flex-col gap-1 lg:flex-row place-content-between bg-gray-100 lg:rounded-lg lg:mx-2 lg:mt-4 items-center dark:bg-gray-900 light:bg-blue">
+      <div className="container flex flex-col gap-1 lg:flex-row place-content-between bg-gray-200 lg:rounded-lg lg:mx-2 lg:mt-4 items-center dark:bg-gray-900 light:bg-blue">
         <Link href="/" locale={locale}>
           <a className=">text-slate-50 lg:p-6 p-4 hover:opacity-90 font-bold lg:text-3xl text-xl relative after:content-['Dev5'] after:text-black after:bg-yellow-400 after:px-1 after:ml-0.5">
             Leo
@@ -54,7 +50,7 @@ export default function Header() {
           <Image
             className="cursor-pointer"
             onClick={changedTheme}
-            src={`/images/${checked ? 'moon' : 'sun'}.png`}
+            src={`/images/${statusTheme ? 'moon' : 'sun'}.png`}
             alt="flag-es"
             width={25}
             height={25}
