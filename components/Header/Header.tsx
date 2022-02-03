@@ -26,7 +26,7 @@ export default function Header() {
 
   return (
     <header className="flex place-content-center ">
-      <div className="container flex flex-col gap-1 lg:flex-row place-content-between bg-gray-200 lg:rounded-lg lg:mx-2 lg:mt-4 items-center dark:bg-gray-900 light:bg-blue">
+      <div className="container flex flex-col gap-1 lg:flex-row place-content-between bg-gray-100 lg:rounded-lg lg:mx-2 lg:mt-4 items-center dark:bg-gray-900 light:bg-blue">
         <Link href="/" locale={locale}>
           <a className=">text-slate-50 lg:p-6 p-4 hover:opacity-90 font-bold lg:text-3xl text-xl relative after:content-['Dev5'] after:text-black after:bg-yellow-400 after:px-1 after:ml-0.5">
             Leo
