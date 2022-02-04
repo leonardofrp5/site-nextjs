@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable @next/next/no-img-element */
 import { motion } from 'framer-motion';
 
 import { useTranslation } from '../../hooks/useTranslation';
@@ -25,7 +27,7 @@ export default function Experience() {
   };
 
   return (
-    <main className="flex place-content-center ">
+    <main id={i18n.MENU_SKILLS} className="flex place-content-center">
       <motion.div
         className="container flex flex-col lg:my-20 my-5 py-4 px-4"
         initial="hidden"
@@ -33,7 +35,7 @@ export default function Experience() {
         transition={variants}
       >
         <motion.h2
-          className="flex lg:justify-start justify-center lg:text-5xl text-3xl font-semibold mb-5 dark:text-slate-50 text-gray-600 underline decoration-yellow-400 decoration-2x"
+          className="flex lg:justify-start justify-center lg:text-5xl text-3xl font-semibold mb-20 dark:text-slate-50 text-gray-600 underline decoration-yellow-400 decoration-2x"
           style={{ display: 'inline-block' }}
           variants={item}
         >

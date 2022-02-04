@@ -33,17 +33,21 @@ export default function Header() {
           </a>
         </Link>
         <div>
-          <ul className="flex list-none">
-            <li className="text-gray-600 dark:text-slate-50 lg:p-6 p-2 lg:text-xl text-base cursor-pointer">
+          <Link href={`/#${i18n.MENU_ABOUT_LINK}`} locale={locale}>
+            <a className=">text-gray-600 dark:text-slate-50 lg:p-6 p-2 lg:text-xl text-base cursor-pointer dark:hover:text-yellow-300">
               {i18n.MENU_ABOUT}
-            </li>
-            <li className="text-gray-600 dark:text-slate-50 lg:p-6 p-2 lg:text-xl text-base cursor-pointer">
+            </a>
+          </Link>
+          <Link href={`/#${i18n.MENU_EXPERIENCE}`} locale={locale}>
+            <a className=">text-gray-600 dark:text-slate-50 lg:p-6 p-2 lg:text-xl text-base cursor-pointer transition-colors dark:hover:text-yellow-300">
               {i18n.MENU_EXPERIENCE}
-            </li>
-            <li className="text-gray-600 dark:text-slate-50 lg:p-6 p-2 lg:text-xl text-base cursor-pointer">
+            </a>
+          </Link>
+          <Link href={`/#${i18n.MENU_SKILLS}`} locale={locale}>
+            <a className=">text-gray-600 dark:text-slate-50 lg:p-6 p-2 lg:text-xl text-base cursor-pointer transition-colors dark:hover:text-yellow-300">
               {i18n.MENU_SKILLS}
-            </li>
-          </ul>
+            </a>
+          </Link>
         </div>
 
         <div className="flex justify-items-end">
