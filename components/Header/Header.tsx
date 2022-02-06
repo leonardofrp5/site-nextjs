@@ -55,7 +55,7 @@ export default function Header() {
             className="cursor-pointer"
             onClick={changedTheme}
             src={`/images/${statusTheme ? 'moon' : 'sun'}.png`}
-            alt="flag-es"
+            alt={`icon-${statusTheme ? 'moon' : 'sun'}`}
             width={25}
             height={25}
           />

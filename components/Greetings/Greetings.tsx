@@ -2,32 +2,14 @@
 import { motion } from 'framer-motion';
 
 import { useTranslation } from '../../hooks/useTranslation';
+import { variants, item } from '../../utils/animations';
 import styles from './styles.module.css';
 
 export default function Greetings() {
   const i18n = useTranslation();
 
-  const variants = {
-    visible: {
-      transition: {
-        staggerChildren: 0.025
-      }
-    }
-  };
-
-  const item = {
-    hidden: {
-      y: '200%',
-      transition: { type: 'spring', stiffness: 100 }
-    },
-    visible: {
-      y: 0,
-      transition: { type: 'spring', stiffness: 100 }
-    }
-  };
-
   return (
-    <div className={`${styles.greeting} flex place-content-center h-screen items-center text-center`}>
+    <section className={`${styles.greeting} flex place-content-center h-screen items-center`}>
       <motion.div
         className="container flex flex-col lg:my-20 my-5 py-4 px-4 pb-10"
         initial="hidden"
@@ -35,14 +17,20 @@ export default function Greetings() {
         transition={variants}
       >
         <motion.h2
-          className="flex justify-center lg:text-7xl text-3xl font-semibold dark:text-slate-50 text-gray-600"
+          className="flex justify-start lg:text-7xl text-3xl font-semibold dark:text-slate-50 text-gray-600"
           style={{ display: 'inline-block' }}
           variants={item}
         >
-          Hi, 👋 I am Leonardo Romero
+          {i18n.GREETINGS_NAME}
         </motion.h2>
-        {/* <span className="text-3xl">Designing is more fun when you do it with code.</span> */}
+        <motion.span
+          className="flex justify-start lg:text-3xl text-2xl my-5 text-yellow-400"
+          style={{ display: 'inline-block' }}
+          variants={item}
+        >
+          {i18n.GREETINGS_ABOUT}
+        </motion.span>
       </motion.div>
-    </div>
+    </section>
   );
 }

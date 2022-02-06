@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 export default {
   MENU_ABOUT: 'Acerca de mí',
   MENU_EXPERIENCE: 'Experiencia',
@@ -10,5 +11,8 @@ export default {
   LOGO_AIGROUP: 'Logo-AiGroup',
   LOGO_WOLOX: 'Logo-Wolox',
   LOGO_ACCENTURE: 'Logo-Accenture',
-  MENU_ABOUT_LINK: 'Sobre'
+  MENU_ABOUT_LINK: 'Sobre',
+  GREETINGS_NAME: 'Hola, 👋 soy Leonardo Romero',
+  GREETINGS_ABOUT: 'Desarrollador Frontend',
+  FOOTER_COPYRIGHT: '- © Diseño y código por LeoDev5'
 };

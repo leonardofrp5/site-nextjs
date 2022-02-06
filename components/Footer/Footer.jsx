@@ -1,14 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable jsx-a11y/alt-text */
-
+import { useTranslation } from '../../hooks/useTranslation';
 import { LIST_CONTACT } from '../../utils/constants';
 
 export default function Footer() {
   const date = new Date();
   const year = date.getFullYear();
+  const i18n = useTranslation();
 
   return (
-    <main className="flex flex-col place-content-center h-64 dark:bg-gray-900 bg-gray-100">
+    <section className="flex flex-col place-content-center h-64 dark:bg-gray-900 bg-gray-100">
       <div className="flex flex-row justify-center">
         {LIST_CONTACT.map(({ href, src, key }) => (
           <a href={href} key={key}>
@@ -16,7 +17,10 @@ export default function Footer() {
           </a>
         ))}
       </div>
-      <div className="flex justify-center my-5 text-gray-600">© {year} - Design & Code by LeoDev5</div>
-    </main>
+      <div className="flex justify-center my-5 text-gray-600">
+        {year}
+        {i18n.FOOTER_COPYRIGHT}
+      </div>
+    </section>
   );
 }

@@ -1,5 +1,5 @@
+/* eslint-disable @next/next/no-page-custom-font */
 import Head from 'next/head';
-import Image from 'next/image';
 
 import Header from 'components/Header/Header';
 import Greetings from 'components/Greetings/Greetings';

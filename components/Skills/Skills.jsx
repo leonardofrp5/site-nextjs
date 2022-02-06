@@ -3,31 +3,14 @@
 import { motion } from 'framer-motion';
 
 import { useTranslation } from '../../hooks/useTranslation';
+import { LIST_SKILLS } from '../../utils/constants';
+import { variants, item } from '../../utils/animations';
 
 export default function Experience() {
   const i18n = useTranslation();
 
-  const variants = {
-    visible: {
-      transition: {
-        staggerChildren: 0.025
-      }
-    }
-  };
-
-  const item = {
-    hidden: {
-      y: '200%',
-      transition: { type: 'spring', stiffness: 100 }
-    },
-    visible: {
-      y: 0,
-      transition: { type: 'spring', stiffness: 100 }
-    }
-  };
-
   return (
-    <main
+    <section
       id={i18n.MENU_SKILLS}
       className="flex place-content-center border-t dark:border-slate-700 border-gray-200"
     >
@@ -38,28 +21,18 @@ export default function Experience() {
         transition={variants}
       >
         <motion.h2
-          className="flex lg:justify-start justify-center lg:text-5xl text-3xl font-semibold mb-20 dark:text-slate-50 text-gray-600 underline decoration-yellow-400 decoration-2x"
+          className="flex lg:justify-start justify-center lg:text-5xl text-3xl font-semibold mb-20 dark:text-slate-50 text-gray-600 border-b-4 border-yellow-400 py-2 w-max"
           style={{ display: 'inline-block' }}
           variants={item}
         >
           {i18n.MENU_SKILLS}
         </motion.h2>
-        <div className="flex flex-row justify-around flex-wrap w-3/5 m-auto">
-          <img className="h-20 m-5 opacity-20 hover:opacity-100" src="/images/html5.png" />
-          <img className="h-20 m-5 opacity-20 hover:opacity-100" src="/images/css3.png" />
-          <img className="h-20 m-5 opacity-20 hover:opacity-100" src="/images/sass.png" />
-          <img className="h-20 m-5 opacity-20 hover:opacity-100" src="/images/tailwind.png" />
-          <img className="h-20 m-5 opacity-20 hover:opacity-100" src="/images/js.png" />
-          <img className="h-20 m-5 opacity-20 hover:opacity-100" src="/images/ts.png" />
-          <img className="h-20 m-5 opacity-20 hover:opacity-100" src="/images/react.png" />
-          <img className="h-20 m-5 opacity-20 hover:opacity-100" src="/images/redux.png" />
-          <img className="h-20 m-5 opacity-20 hover:opacity-100" src="/images/saga.png" />
-          <img className="h-20 m-5 opacity-20 hover:opacity-100" src="/images/jest.png" />
-          <img className="h-20 m-5 opacity-20 hover:opacity-100" src="/images/testing_library.png" />
-          <img className="h-20 m-5 opacity-20 hover:opacity-100" src="/images/nextjs.png" />
-          <img className="h-20 m-5 opacity-20 hover:opacity-100" src="/images/vercel.svg" />
+        <div className="flex flex-row justify-around flex-wrap lg:w-3/5 m-auto">
+          {LIST_SKILLS.map(({ src, alt, key }) => (
+            <img className="h-20 m-5 opacity-20 hover:opacity-100" src={src} key={key} alt={alt} />
+          ))}
         </div>
       </motion.div>
-    </main>
+    </section>
   );
 }
