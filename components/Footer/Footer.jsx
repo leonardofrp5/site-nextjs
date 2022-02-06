@@ -8,7 +8,7 @@ export default function Footer() {
   const year = date.getFullYear();
 
   return (
-    <main className="flex flex-col place-content-center h-64 border-t dark:border-slate-50 border-gray-200">
+    <main className="flex flex-col place-content-center h-64 dark:bg-gray-900 bg-gray-100">
       <div className="flex flex-row justify-center">
         {LIST_CONTACT.map(({ href, src, key }) => (
           <a href={href} key={key}>

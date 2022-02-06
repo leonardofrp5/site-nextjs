@@ -27,7 +27,10 @@ export default function Experience() {
   };
 
   return (
-    <main id={i18n.MENU_SKILLS} className="flex place-content-center">
+    <main
+      id={i18n.MENU_SKILLS}
+      className="flex place-content-center border-t dark:border-slate-700 border-gray-200"
+    >
       <motion.div
         className="container flex flex-col lg:my-20 my-5 py-4 px-4"
         initial="hidden"
@@ -41,11 +44,11 @@ export default function Experience() {
         >
           {i18n.MENU_SKILLS}
         </motion.h2>
-        <div className="flex flex-row justify-around flex-wrap">
+        <div className="flex flex-row justify-around flex-wrap w-3/5 m-auto">
+          <img className="h-20 m-5 opacity-20 hover:opacity-100" src="/images/html5.png" />
           <img className="h-20 m-5 opacity-20 hover:opacity-100" src="/images/css3.png" />
           <img className="h-20 m-5 opacity-20 hover:opacity-100" src="/images/sass.png" />
           <img className="h-20 m-5 opacity-20 hover:opacity-100" src="/images/tailwind.png" />
-          <img className="h-20 m-5 opacity-20 hover:opacity-100" src="/images/html5.png" />
           <img className="h-20 m-5 opacity-20 hover:opacity-100" src="/images/js.png" />
           <img className="h-20 m-5 opacity-20 hover:opacity-100" src="/images/ts.png" />
           <img className="h-20 m-5 opacity-20 hover:opacity-100" src="/images/react.png" />
