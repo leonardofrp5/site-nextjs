@@ -1,10 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 
 import { useTranslation } from '../../hooks/useTranslation';
+import styles from './styles.module.css';
 
-export default function Experience() {
+export default function Greetings() {
   const i18n = useTranslation();
 
   const variants = {
@@ -27,10 +27,7 @@ export default function Experience() {
   };
 
   return (
-    <main
-      id={i18n.MENU_EXPERIENCE}
-      className="flex place-content-center border-t dark:border-slate-700 border-gray-200"
-    >
+    <div className={`${styles.greeting} flex place-content-center h-screen items-center text-center`}>
       <motion.div
         className="container flex flex-col lg:my-20 my-5 py-4 px-4 pb-10"
         initial="hidden"
@@ -38,18 +35,14 @@ export default function Experience() {
         transition={variants}
       >
         <motion.h2
-          className="flex lg:justify-start justify-center lg:text-5xl text-3xl font-semibold mb-20 dark:text-slate-50 text-gray-600 underline decoration-yellow-400 decoration-2x"
+          className="flex justify-center lg:text-7xl text-3xl font-semibold dark:text-slate-50 text-gray-600"
           style={{ display: 'inline-block' }}
           variants={item}
         >
-          {i18n.MENU_EXPERIENCE}
+          Hi, 👋 I am Leonardo Romero
         </motion.h2>
-        <div className="flex flex-row justify-around items-center">
-          <img className="h-12 object-fill mb-6" src="/images/accenture.png" alt={i18n.LOGO_ACCENTURE} />
-          <img className="h-20 object-fill" src="/images/wolox.png" alt={i18n.LOGO_WOLOX} />
-          <img className="h-9 object-fill" src="/images/aigroup.png" alt={i18n.LOGO_AIGROUP} />
-        </div>
+        {/* <span className="text-3xl">Designing is more fun when you do it with code.</span> */}
       </motion.div>
-    </main>
+    </div>
   );
 }
