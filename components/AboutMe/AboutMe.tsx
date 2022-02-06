@@ -1,31 +1,13 @@
 import { motion } from 'framer-motion';
 
 import { useTranslation } from '../../hooks/useTranslation';
+import { variants, item } from '../../utils/animations';
 
 export default function AboutMe() {
   const i18n = useTranslation();
 
-  const variants = {
-    visible: {
-      transition: {
-        staggerChildren: 0.025
-      }
-    }
-  };
-
-  const item = {
-    hidden: {
-      y: '200%',
-      transition: { type: 'spring', stiffness: 100 }
-    },
-    visible: {
-      y: 0,
-      transition: { type: 'spring', stiffness: 100 }
-    }
-  };
-
   return (
-    <main id={i18n.MENU_ABOUT_LINK} className="flex place-content-center">
+    <section id={i18n.MENU_ABOUT_LINK} className="flex place-content-center">
       <motion.div
         className="container flex flex-col lg:my-20 my-5 py-4 px-4"
         initial="hidden"
@@ -33,7 +15,7 @@ export default function AboutMe() {
         transition={variants}
       >
         <motion.h2
-          className="flex lg:justify-start justify-center lg:text-5xl text-3xl font-semibold mb-5 dark:text-slate-50 text-gray-600 underline decoration-yellow-400 decoration-2x"
+          className="flex lg:justify-start justify-center lg:text-5xl text-3xl font-semibold mb-5 dark:text-slate-50 text-gray-600 border-b-4 border-yellow-400 py-2 w-max"
           style={{ display: 'inline-block' }}
           variants={item}
         >
@@ -73,6 +55,6 @@ export default function AboutMe() {
           />
         </div>
       </motion.div>
-    </main>
+    </section>
   );
 }
