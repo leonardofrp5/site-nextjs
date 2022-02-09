@@ -11,9 +11,9 @@ export default function Footer() {
   return (
     <section className="flex flex-col place-content-center h-64 dark:bg-gray-900 bg-gray-100">
       <div className="flex flex-row justify-center">
-        {LIST_CONTACT.map(({ href, src, key }) => (
+        {LIST_CONTACT.map(({ alt, src, key }) => (
           <a href={href} key={key}>
-            <img className="h-12 my-4 mx-4 cursor-pointer" src={src} />
+            <img className="h-12 my-4 mx-4 cursor-pointer" src={src} alt={alt} />
           </a>
         ))}
       </div>
