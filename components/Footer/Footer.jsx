@@ -16,7 +16,7 @@ export default function Footer() {
           </a>
         ))}
       </div>
-      <div className="flex justify-center my-5 text-gray-600">© {year} - Design & Code by LeoDev5</div>
+      <div className="flex justify-center my-5 text-gray-600">{year} - Design & Code by LeoDev5</div>
     </main>
   );
 }
